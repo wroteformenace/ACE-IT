@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #aeecef; /* Light mode background color */
+    color: #3066be;
+  }
+  
+  h1, p {
+    color: #3066be;
+  }
+  
+  /* Header Section */
+  .header {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #80ded9;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+   
+  /* CSS for the ACE IT Logo */
+
+        /* Logo styling*/
+        .logo {
+          position: absolute;
+          top: 20px;
+          left: 20px;  
+          width: 250px;  
+          transition: transform 0.3s ease-in-out;
+      }
+
+      .logo img {
+          width: 100%;
+          height: auto;
+      }
+
+      /* Hover effect*/
+      .logo:hover {
+          transform: scale(1.1);  
+      }
+
+      /* Fade-in animation*/
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+
+      .logo img {
+          animation: fadeIn 1s ease;
+      }
+  
+  .about-content {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: justify;
+    color: #3066be;
+  }
+  
+  /* Footer Section */
+  .footer {
+    position: relative;
+    background: linear-gradient(to right, #3066be, #aeecef); /* Minimal gradient footer */
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  .footer a {
+    color: #aeecef;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #ff9f1c;
+  }
+  
+  /* Social Dock in Footer */
+  .social-dock {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-dock a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .social-dock a:hover img {
+    transform: scale(1.1);
+  }
+  
+  
