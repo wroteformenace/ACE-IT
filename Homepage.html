@@ -7,9 +7,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
-    <link href="css/homepage-style.css" rel="stylesheet">
-
-    <script src="js/homepage-script.js"></script>
+   /* <link href="css/homepage-style.css" rel="stylesheet"> 
+    <script src="js/homepage-script.js"></script> */
 
 </head>
 <body>
@@ -20,7 +19,199 @@
             <div class="toggle" onclick="toggleMode()"></div>
         </div>
     </header> 
-      
+
+    /* css */
+
+    <style>
+        /*Styling for the homepage*/
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #3066be, #94dde0);
+    color: #3066be;
+    animation: gradientBGLight 15s ease infinite;
+}
+@keyframes gradientBGLight {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+body.dark-mode {
+    background: linear-gradient(135deg, #345a7d, #79a7d1); /* Dark mode gradient */
+    animation: gradientBGDark 15s ease infinite;
+}
+@keyframes gradientBGDark {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+h1 {
+    font-size: 28px;
+    color: whitesmoke;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 40px 0;
+}
+.search-bar {
+    width: 70%;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid #6d9dc5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    margin: 10px 0;
+    transition: border-color 0.3s ease;
+}
+.search-bar:focus {
+    border-color: #119da4;
+    outline: none;
+}
+.submit-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #3066be;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: -10px; /* Position the button closer */
+}
+.submit-button:hover {
+    background: #119da4;
+    transform: scale(1.05);
+}
+.solutions {
+    color: #3066be;
+    font-size: 22px;
+    margin: 20px 0;
+}
+.add-question {
+    background: #6d9dc5;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.add-question:hover {
+    background: #3066be;
+}
+footer {
+    background: #80ded9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+footer a {
+    color: #3066be;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #2b3a67;
+}
+.toggle-container {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    margin-right: 20px;
+}
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #119da4;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.toggle:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    transition: transform 0.3s ease;
+}
+.toggle.active {
+    background: #6d9dc5;
+}
+.toggle.active:before {
+    transform: translateX(30px);
+}
+.dark-mode footer {
+    background: #79a7d1;
+}
+
+ /* CSS for the ACE IT Logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;  
+    width: 250px; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Hover effect on the logo */
+.logo:hover {
+    transform: scale(1.1);  
+}
+
+/* Fade-in animation for the logo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.logo img {
+    animation: fadeIn 1s ease;
+}
+    </style>  
+    
     <div class="header">
         <div class="logo">
             <img src="images/Ace it-logo.png" alt="ACE IT Logo">
@@ -43,5 +234,42 @@
         </div>
         <div style="color: #3066be;"><a href="Homepage.html">ACE IT</a></div>
     </footer>
+
+    /* js */
+
+    <script>
+        /*Logo animation*/
+document.addEventListener('DOMContentLoaded', function () {
+    const logo = document.querySelector('.logo img');
+
+    // Add bounce effect on load
+    logo.style.animation = "bounce 2s infinite";
+
+    logo.addEventListener('mouseover', () => {
+        logo.style.transform = "scale(1.15)";
+    });
+
+    logo.addEventListener('mouseout', () => {
+        logo.style.transform = "scale(1)";
+    });
+});
+
+/*Function for toggleMode*/
+let isDarkMode = false;
+
+function toggleMode() {
+    const body = document.body;
+    const footer = document.querySelector('footer');
+    const toggle = document.querySelector('.toggle');
+    isDarkMode = !isDarkMode;
+    if (isDarkMode) {
+        body.classList.add('dark-mode');
+        toggle.classList.add('active');
+    } else {
+        body.classList.remove('dark-mode');
+        toggle.classList.remove('active');
+    }
+}
+    </script>
 </body>
 </html>
