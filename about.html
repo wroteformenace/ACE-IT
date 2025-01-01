@@ -1,194 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACE IT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
-    <link href="css/homepage-style.css" rel="stylesheet"> 
-    <script src="js/homepage-script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ACE IT</title>
+  <link href="css/about-style.css" rel="stylesheet">  
+  <script src="js/about-script.js"></script>
 </head>
 <body>
 
-<header>
-    <div class="toggle-container" onclick="toggleMode()">
-        <div class="toggle">
-            <span class="icon" id="mode-icon"><i class="fas fa-sun" style="color: #FFD43B;"></i></span> <!-- Sun icon for light mode -->
-        </div>
-    </div>
-    <div class="logo">
-        <img src="images/Ace it-logo.png" alt="ACE IT Logo">
-    </div>
-</header>
-
-<main class="container">
-    <h1 style="color: white;">Get all answers here</h1>
-    <input type="text" class="search-bar" placeholder="Search for solutions...">
-    <button class="submit-button">Search</button>
-    <p class="solutions">1k+ solutions</p>
-    <a class="add-question" href="question.html">Add Question with Solution</a>
-</main>
-
-<footer>
-    <nav>
-        <a href="about.html">About Us</a>
-        <a href="#support">Support</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
-    <div style="color: #3066be;"><a href="Homepage.html">ACE IT</a></div>
-</footer>
-
-<style>
-/* Styling for the homepage */
-* {
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-    background: linear-gradient(135deg, #3066be, #94dde0);
-    color: #3066be;
-}
-body.dark-mode {
-    background: linear-gradient(135deg, #345a7d, #79a7d1); /* Dark mode gradient */
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-h1 {
-    font-size: 28px;
-    color: whitesmoke;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-.search-bar {
-    width: 70%;
-    padding: 15px;
-    border-radius: 30px;
-    border: 2px solid #6d9dc5;
-}
-.submit-button {
-    padding: 15px 30px;
-    border-radius: 30px;
-}
-.solutions {
-    color: #3066be;
-}
-.add-question {
-    background: #6d9dc5; 
-}
-footer {
-    background: #80ded9; 
-}
-footer a {
-    color: #3066be; 
-}
-
-/* Toggle button styles */
-.toggle-container {
-   margin-left: auto;
-   position: relative; /* Positioning to the top left */
-   top: 20px; /* Distance from the top */
-   cursor: pointer; /* Change cursor to pointer */
-   display: flex; /* Flexbox for alignment */
-   align-items: center; /* Center items vertically */
-}
-.toggle {
-   background-color: #d1d1d1; 
-   border-radius: 50px; /* Make it more oval */
-   width: 60px; /* Increased width for better usability */
-   height: 30px; 
-   display: flex; 
-   align-items: center; 
-   justify-content: center; 
-}
-
-/* Icon styles */
-.icon {
-   position: absolute; /* Positioning to avoid hiding */
-   left: 6px; /* Space from the left edge */
-   font-size: 18px; /* Adjust icon size */
-}
-
-/* Dark mode styles */
-body.dark-mode .toggle {
-   background-color: black; /* Change toggle background in dark mode */
-}
-
-body.dark-mode .icon#mode-icon i {
-   content: "\f186"; /* Moon icon for dark mode (Font Awesome) */
-}
-
-/* Change icon color based on mode */
-body.dark-mode .icon#mode-icon i {
-   color: white; /* White icon in dark mode */
-}
-
-body .icon#mode-icon i {
-   color: black; /* Black icon in light mode */
-}
-
-/* Additional styles for responsive design can go here */
-</style>
-
-<script>
-//Logo animation
-document.addEventListener('DOMContentLoaded', function () {
-   const logo = document.querySelector('.logo img');
-   logo.style.animation = "bounce 2s infinite";
-
-   logo.addEventListener('mouseover', () => {
-       logo.style.transform = "scale(1.15)";
-   });
-
-   logo.addEventListener('mouseout', () => {
-       logo.style.transform = "scale(1)";
-   });
-});
-
-//Function for toggleMode
-let isDarkMode = false;
-
-function toggleMode() {
-   const body = document.body;
-   const toggle = document.querySelector('.toggle');
-   const modeIcon = document.getElementById('mode-icon');
+  <!-- Header Section -->
+  <div class="header">
+    <h1>About Us</h1>
+    <div class = "logo" ><a href="Homepage.html"><img src="images/Ace it-logo.png" alt="ACE IT Logo"></a></div>
+  </div>
    
-   isDarkMode = !isDarkMode;
 
-   if (isDarkMode) {
-       body.classList.add('dark-mode');
-       toggle.classList.add('active');
-       modeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'; // Change to moon icon
-   } else {
-       body.classList.remove('dark-mode');
-       toggle.classList.remove('active');
-       modeIcon.innerHTML = '<i class="fas fa-sun" style="color: #FFD43B;"></i>'; // Change back to sun icon
-   }
-}
+  <div class="about-content">
+    <p>
+      Welcome to ACE IT, your number one source for all things related to question solutions.
+      We're dedicated to providing you the very best of academic assistance, with a focus on quality, accuracy, and fast results.
+    </p>
+    <p>
+      Founded in 2024, ACE IT has come a long way from its beginnings as a simple idea. 
+      When we first started out, our passion for solving complex academic problems drove us to build this platform, 
+      so that ACE IT can offer you a seamless solution-finding experience.
+    </p>
+    <p>
+      We hope you enjoy using our platform as much as we enjoy offering it to you. 
+      If you have any questions or comments, please don't hesitate to contact us.
+    </p>
+  </div>
 
-// Search button functionality
-document.querySelector('.submit-button').addEventListener('click', function() {
-   const query = document.querySelector('.search-bar').value;
-   alert(`Searching for solutions related to "${query}"`); // Placeholder for actual search functionality
-});
-</script>
+  <!-- Footer Section with Social Dock -->
+  <footer class="footer">
+    <p>&copy; 2024 ACE IT | <a href="#contact">Contact Us</a> | <a href="#contact">Support Us</a></p>
+
+  <div><a href="Homepage.html"><img src="images/Ace it-logo.png" alt="ACE IT Logo"></a></div>
+
+    <div class="social-dock">
+      <a href="https://github.com/wroteformenace" target="_blank"><img src="images/github-icon.png" alt="GitHub"></a>
+      <a href="https://linkedin.com" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+      <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
+    </div>
+  </footer>
 
 </body>
 </html>
